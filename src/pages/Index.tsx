@@ -45,12 +45,12 @@ const Index = () => {
               View Work
               <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link
-              to="/about"
+            <a
+              href="https://drive.google.com/uc?export=download&id=1npy2rndmwhHgQA6VzmVCfI5ouD0TDRSb"
               className="press inline-flex items-center rounded-full border border-hairline bg-surface-elevated px-6 py-3 text-sm font-medium text-foreground transition-all duration-300 ease-out-soft hover:-translate-y-0.5 hover:shadow-soft"
             >
-              About me
-            </Link>
+              Resume
+            </a>
           </div>
         </div>
       </section>
