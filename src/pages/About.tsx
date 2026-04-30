@@ -113,7 +113,7 @@ const About = () => {
             My resume covers roles, education, and selected talks.
           </p>
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/uc?export=download&id=1npy2rndmwhHgQA6VzmVCfI5ouD0TDRSb"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-all duration-200 ease-out-soft hover:-translate-y-0.5 hover:shadow-elevated"
           >
             <Download className="h-4 w-4" />

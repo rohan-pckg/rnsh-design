@@ -60,7 +60,7 @@ export const Navbar = () => {
           ))}
           <ThemeToggle />
           <a
-            href="/resume.pdf"
+            href="https://drive.google.com/uc?export=download&id=1npy2rndmwhHgQA6VzmVCfI5ouD0TDRSb"
             className="press ml-0.5 hidden items-center rounded-full bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-soft transition-all duration-300 ease-out-soft hover:-translate-y-0.5 hover:shadow-elevated sm:inline-flex"
           >
             Resume
