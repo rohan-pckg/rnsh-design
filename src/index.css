@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System — minimal, Apple/Linear/Stripe-inspired
+   All colors in HSL. Define everything here, never inline.
+*/
+
+@layer base {
+  :root {
+    /* Surfaces */
+    --background: 40 30% 98%;
+    --foreground: 220 14% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 14% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 14% 11%;
+
+    /* Brand — soft warm ink */
+    --primary: 220 14% 11%;
+    --primary-foreground: 40 30% 98%;
+
+    --secondary: 36 22% 94%;
+    --secondary-foreground: 220 14% 11%;
+
+    --muted: 36 18% 95%;
+    --muted-foreground: 220 9% 42%;
+
+    --accent: 36 22% 92%;
+    --accent-foreground: 220 14% 11%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 90%;
+    --input: 30 15% 90%;
+    --ring: 220 14% 11%;
+
+    --radius: 1rem;
+
+    /* Semantic surfaces */
+    --surface: 36 28% 96%;
+    --surface-elevated: 0 0% 100%;
+    --hairline: 30 12% 88%;
+
+    /* Shadows — soft, layered */
+    --shadow-xs: 0 1px 2px hsl(220 14% 11% / 0.04);
+    --shadow-sm: 0 2px 8px -2px hsl(220 14% 11% / 0.06);
+    --shadow-md: 0 12px 32px -12px hsl(220 14% 11% / 0.12);
+    --shadow-lg: 0 24px 60px -20px hsl(220 14% 11% / 0.18);
+
+    /* Transitions */
+    --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+    --transition-base: 250ms var(--ease-out-soft);
+
+    /* Sidebar (unused but kept) */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 14% 7%;
+    --foreground: 40 20% 96%;
+
+    --card: 220 14% 9%;
+    --card-foreground: 40 20% 96%;
+
+    --popover: 220 14% 9%;
+    --popover-foreground: 40 20% 96%;
+
+    --primary: 40 30% 96%;
+    --primary-foreground: 220 14% 9%;
+
+    --secondary: 220 12% 14%;
+    --secondary-foreground: 40 20% 96%;
+
+    --muted: 220 12% 13%;
+    --muted-foreground: 220 8% 62%;
+
+    --accent: 220 12% 16%;
+    --accent-foreground: 40 20% 96%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 40 20% 90%;
+
+    --surface: 220 14% 10%;
+    --surface-elevated: 220 14% 12%;
+    --hairline: 220 12% 18%;
+
+    --shadow-xs: 0 1px 2px hsl(0 0% 0% / 0.4);
+    --shadow-sm: 0 2px 10px -2px hsl(0 0% 0% / 0.45);
+    --shadow-md: 0 16px 40px -16px hsl(0 0% 0% / 0.55);
+    --shadow-lg: 0 28px 70px -24px hsl(0 0% 0% / 0.7);
+
+    --sidebar-background: 220 14% 9%;
+    --sidebar-foreground: 40 10% 80%;
+    --sidebar-primary: 40 20% 96%;
+    --sidebar-primary-foreground: 220 14% 9%;
+    --sidebar-accent: 220 12% 14%;
+    --sidebar-accent-foreground: 40 20% 96%;
+    --sidebar-border: 220 12% 18%;
+    --sidebar-ring: 40 20% 90%;
+  }
+}
+
+@layer base {
+  html, body {
+    transition: background-color 400ms var(--ease-out-soft), color 400ms var(--ease-out-soft);
+  }
+
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-6xl px-6 md:px-10;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-3xl px-6 md:px-10;
+  }
+
+  .eyebrow {
+    @apply text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground;
+  }
+
+  .heading-display {
+    @apply font-serif text-4xl leading-[1.05] tracking-tight md:text-6xl lg:text-7xl;
+  }
+
+  .heading-1 {
+    @apply font-serif text-3xl leading-tight tracking-tight md:text-5xl;
+  }
+
+  .heading-2 {
+    @apply font-serif text-2xl leading-tight tracking-tight md:text-3xl;
+  }
+
+  .lead {
+    @apply text-lg leading-relaxed text-muted-foreground md:text-xl;
+  }
+
+  .hairline {
+    @apply border-t border-[hsl(var(--hairline))];
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fade-up 0.7s var(--ease-out-soft) both;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s var(--ease-out-soft), transform 0.8s var(--ease-out-soft);
+    will-change: opacity, transform;
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: "";
+    @apply absolute left-0 -bottom-0.5 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-300;
+  }
+  .link-underline:hover::after {
+    @apply origin-left scale-x-100;
+  }
+
+  /* Spotlight that follows the cursor on cards */
+  .spotlight {
+    position: relative;
+    isolation: isolate;
+  }
+  .spotlight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      320px circle at var(--spot-x, 50%) var(--spot-y, 50%),
+      hsl(var(--foreground) / 0.06),
+      transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 400ms var(--ease-out-soft);
+    pointer-events: none;
+    z-index: 1;
+  }
+  .spotlight:hover::before { opacity: 1; }
+
+  /* Press feedback */
+  .press {
+    transition: transform 200ms var(--ease-out-soft), box-shadow 250ms var(--ease-out-soft);
+  }
+  .press:active { transform: translateY(1px) scale(0.98); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
