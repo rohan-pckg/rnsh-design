@@ -28,9 +28,10 @@ const Index = () => {
             className="lead mt-5 max-w-2xl animate-fade-up md:mt-6"
             style={{ animationDelay: "160ms" }}
           >
-            I&apos;m Rohan - a product designer with 1.5 years of experience
-            shipping consumer and enterprise software at the intersection of
-            craft, clarity, and outcomes.
+            I’m Rohan - a product designer with 1.5+ years of experience
+            designing intuitive digital experiences across web and mobile. I
+            focus on simplifying complex systems into clear, user-friendly
+            interfaces.
           </p>
 
           <div
@@ -100,7 +101,7 @@ const Index = () => {
             talk.
           </p>
           <a
-            href="mailto:hello@example.com"
+            href="mailto:rnsh.space@gmail.com"
             className="press mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-soft transition-all duration-300 ease-out-soft hover:-translate-y-0.5 hover:shadow-elevated"
           >
             Say hello

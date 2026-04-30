@@ -43,23 +43,26 @@ const About = () => {
               className="heading-display mt-6 animate-fade-up"
               style={{ animationDelay: "80ms" }}
             >
-              I make digital products feel inevitable.
+              I design products that make complex things feel simple.
             </h1>
             <div
               className="mt-8 space-y-5 text-lg leading-relaxed text-muted-foreground animate-fade-up"
               style={{ animationDelay: "160ms" }}
             >
               <p>
-                I&apos;m a product designer with 1.5 years of experience across
-                fintech, health, and SaaS. I&apos;ve led design at two
-                early-stage startups and contributed to systems used by
-                millions.
+                I’m a product designer with 1.5+ years of experience working
+                across fintech, health, and SaaS. I’ve designed and shipped user
+                experiences for early-stage products, collaborating closely with
+                engineering to build scalable and intuitive systems.
               </p>
               <p>
-                I care about the small things that make software feel
-                respectful: clear language, considered defaults, and the right
-                amount of motion. Outside of work I make ceramics, take long
-                walks, and write a quiet newsletter on craft and software.
+                My approach is grounded in clarity - simplifying workflows,
+                reducing friction, and making products easier to understand and
+                use. I care about structure as much as visuals, and I enjoy
+                working at the intersection of design and engineering. Outside
+                of work, I explore interaction and motion, and spend time
+                thinking about how small design decisions shape everyday
+                experiences.
               </p>
             </div>
           </div>
